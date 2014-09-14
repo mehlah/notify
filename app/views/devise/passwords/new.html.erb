@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="small-12 medium-6 columns medium-centered">
+    <div class="card">
+      <h3>Réinitialiser votre mot de passe</h3>
+      <hr>
+
+      <p>Entrez l'adresse e-mail associée à votre compte, et nous vous enverrons par e-mail un lien pour réinitialiser votre mot de passe.</p>
+
+      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= f.input :email, label: 'Adresse email', required: true, autofocus: true %>
+
+        <%= f.button :submit, 'Envoyer les instructions de réinitialisation' %>
+      <% end %>
+
+      <%= render 'devise/shared/links' %>
+    </div>
+  </div>
+</div>

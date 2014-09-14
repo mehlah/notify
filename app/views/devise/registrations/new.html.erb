@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="small-12 medium-6 columns medium-centered">
+    <div class="card">
+      <h3>Inscription</h3>
+      <hr>
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.input :email, required: true, autofocus: true %>
+        <%= f.input :password, label: 'Mot de passe', required: true %>
+        <%= f.input :password_confirmation, label: 'Confirmation', required: true %>
+
+        <%= f.button :submit, 'Créer mon compte' %>
+      <% end %>
+
+      <%= render 'devise/shared/links' %>
+    </div>
+  </div>
+</div>
