@@ -1,0 +1,8 @@
+<h3>Nouvelle classe</h3>
+
+<%= simple_form_for @group do |f| %>
+  <%= f.input :class_name, label: 'Nom de la classe' %>
+  <%= f.button :submit, 'Ajouter cette classe' %>
+<% end %>
+
+<a class="close-reveal-modal">&#215;</a>

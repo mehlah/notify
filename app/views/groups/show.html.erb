@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="small-12 columns">
+    <ul class="tabs vertical">
+      <% @groups.each do |group| %>
+        <li class="tab-title <%= 'active' if current_page?(group) %>">
+          <%= link_to group.class_name, group %>
+        </li>
+      <% end %>
+      <li class="tab-title"><%= link_to '+ Nouvelle classe', new_group_path, data: { reveal_id: 'new-group', reveal_ajax: true } %></li>
+    </ul>
+
+    <div class="tabs-content vertical">
+      <div class="content active">
+        <p>Content for <%= @group.class_name %> goes here</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="new-group" class="reveal-modal medium" data-reveal>
+</div>

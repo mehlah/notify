@@ -1,3 +1,59 @@
 @import 'foundation/functions';
 
+$row-width: rem-calc(1180);
+
+$body-font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+$topbar-height: 45px;
+$topbar-margin-bottom: $topbar-height * $golden;
+
+$form-spacing: rem-calc(18);
+$form-label-font-size: rem-calc(16);
+$form-label-font-weight: 600;
+$form-label-bottom-margin: rem-calc(4);
+
+$button-tny: rem-calc(10);
+$button-sml: rem-calc(12);
+$button-med: rem-calc(14);
+$button-lrg: rem-calc(16);
+$button-font-tny: rem-calc(12);
+$button-font-sml: rem-calc(14);
+$button-font-med: rem-calc(16);
+$button-font-lrg: rem-calc(20);
+
 @import 'foundation';
+
+.button {
+  @include button($button-med, $button-bg-color, true, false, false, false);
+}
+
+form {
+  label.checkbox, label.radio {
+    &>input {
+      margin-right: 6px;
+    }
+    font-size: $input-font-size;
+    font-weight: normal;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  @extend .radius
+}
+
+input[type="submit"] {
+  -webkit-border-radius: $global-radius;
+}
