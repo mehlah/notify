@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.2'
 
@@ -13,6 +14,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rack-timeout'
 gem 'rails', '~> 4.1.0'
+gem 'rails-assets-modular-scale'
 gem 'recipient_interceptor'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
