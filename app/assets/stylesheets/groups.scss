@@ -1,0 +1,10 @@
+.tab-title#new-group-link {
+  > a {
+    background: transparent;
+    color: $primary-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: rem-calc(14);
+    letter-spacing: .075em;
+  }
+}
