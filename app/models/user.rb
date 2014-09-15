@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :groups, dependent: :destroy
+
+  validates :name, presence: true
 end

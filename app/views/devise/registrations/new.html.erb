@@ -5,6 +5,7 @@
       <hr>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.input :name, label: 'Nom et prénom', required: true %>
         <%= f.input :email, required: true, autofocus: true %>
         <%= f.input :password, label: 'Mot de passe', required: true %>
         <%= f.input :password_confirmation, label: 'Confirmation', required: true %>

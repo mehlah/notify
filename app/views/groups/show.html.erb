@@ -6,7 +6,7 @@
           <%= link_to group.class_name, group %>
         </li>
       <% end %>
-      <li class="tab-title"><%= link_to '+ Nouvelle classe', new_group_path, data: { reveal_id: 'new-group', reveal_ajax: true } %></li>
+      <li id="new-group-link" class="tab-title"><%= link_to '+ Nouvelle classe', new_group_path, data: { reveal_id: 'new-group', reveal_ajax: true } %></li>
     </ul>
 
     <div class="tabs-content vertical">

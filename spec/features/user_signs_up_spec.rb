@@ -6,6 +6,7 @@ feature 'User signs up' do
 
       visit '/'
       click_link "S'inscrire"
+      fill_in 'Nom et prénom', with: user.name
       fill_in 'Email', with: user.email
       fill_in 'Mot de passe', with: user.password
       fill_in 'Confirmation', with: user.password

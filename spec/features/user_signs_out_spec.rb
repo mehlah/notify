@@ -8,7 +8,7 @@ feature 'User signs out' do
     visit '/'
     click_link 'Se déconnecter'
 
-    expect(page).not_to have_content(user.email)
+    expect(page).not_to have_content(user.name)
     expect(page).to have_content('Se connecter')
   end
 end
