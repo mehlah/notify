@@ -1,0 +1,43 @@
+#subscribers {
+  @include panel($bg:#fff, $padding:0, $adjust:false);
+  @include radius;
+
+  header {
+    background: $panel-bg;
+    padding: rem-calc(8) $column-gutter / 2;
+    border-bottom: 1px solid $panel-border-color;
+    h6 {
+      text-transform: uppercase;
+      font-size: rem-calc(12);
+      letter-spacing: .075em;
+      margin: 0;
+      color: #a6a6a6;
+    }
+  }
+
+  ol {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  li {
+    font-size: rem-calc(14);
+    padding: rem-calc(4) $column-gutter / 4;
+    &:first-child {
+      margin-top: rem-calc(8);
+    }
+
+    a {
+      padding: rem-calc(8) $column-gutter / 4;
+    }
+  }
+}
+
+.subscriber {
+  h6 {
+    font-weight: 600;
+  }
+  p {
+    font-size: rem-calc(14);
+  }
+}

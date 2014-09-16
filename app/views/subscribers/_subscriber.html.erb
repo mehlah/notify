@@ -1,0 +1,6 @@
+<li><%= link_to subscriber.name, '', data: { dropdown: "hover-#{subscriber.id}", options: 'is_hover:true; align:left' } %></li>
+
+<div id=<%= "hover-#{subscriber.id}" %> data-dropdown-content class="f-dropdown content subscriber">
+  <h6><%= subscriber.name %></h6>
+  <p><i class="icon-call-out"></i> <%= subscriber.phone %></p>
+</div>

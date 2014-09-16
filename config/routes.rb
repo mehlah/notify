@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :setup, only: :new
-  resources :groups, path: 'classes'
+  resources :groups, path: 'classes' do
+    resources :subscribers
+  end
 end

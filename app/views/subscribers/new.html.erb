@@ -1,0 +1,10 @@
+<h3>Inscrire un parent</h3>
+<hr>
+
+<%= simple_form_for [@group, @subscriber] do |f| %>
+  <%= f.input :name, label: 'Nom et prénom' %>
+  <%= f.input :phone, label: 'Numéro de téléphone portable' %>
+  <%= f.button :submit, 'Ajouter' %>
+<% end %>
+
+<a class="close-reveal-modal">&#215;</a>

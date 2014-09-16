@@ -6,17 +6,39 @@
           <%= link_to group.class_name, group %>
         </li>
       <% end %>
-      <li id="new-group-link" class="tab-title"><%= link_to '+ Nouvelle classe', new_group_path, data: { reveal_id: 'new-group', reveal_ajax: true } %></li>
+      <li id="new-group-link" class="tab-title">
+        <%= link_to new_group_path, data: { reveal_id: 'new-group', reveal_ajax: true } do %>
+          <i class="icon-plus"></i> Nouvelle classe
+        <% end %>
+      </li>
     </ul>
 
     <div class="tabs-content vertical">
       <div class="content active">
-        <p>Content for <%= @group.class_name %> goes here</p>
+        <div class="row">
+          <div class="small-12 medium-8 columns">
+            <p>Content for <%= @group.class_name %> goes here</p>
+          </div>
+          <div class="medium-4 columns hide-for-small">
+            <%= link_to new_group_subscriber_path(@group), class: 'button', data: { reveal_id: 'new-subscription', reveal_ajax: true } do %>
+              <i class="icon-user-follow"></i> Ajouter des parents
+            <% end %>
+
+            <div id="subscribers">
+              <header>
+                <h6><i class="icon-users"></i> <%= pluralize(@group.subscribers.size, 'inscrit', 'inscrits') %></h6>
+              </header>
+              <ol>
+                <%= render @group.subscribers %>
+              </ol>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 
-<div id="new-group" class="reveal-modal medium" data-reveal>
-</div>
+<div id="new-group" class="reveal-modal medium" data-reveal></div>
+<div id="new-subscription" class="reveal-modal medium" data-reveal></div>
