@@ -1,0 +1,4 @@
+<%= simple_form_for [@group, @message] do |f| %>
+  <%= f.input :body, placeholder: 'Dites quelque chose !', label: false %>
+  <%= f.button :submit, 'Envoyer' %>
+<% end %>

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :setup, only: :new
   resources :groups, path: 'classes' do
     resources :subscribers
+    resources :messages, only: :create
   end
 end
