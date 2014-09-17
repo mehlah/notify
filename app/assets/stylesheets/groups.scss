@@ -8,12 +8,25 @@
 
   .tab-title {
     border-bottom: 1px solid $tabs-navigation-hover-bg-color;
+    a.group-settings {
+      display: none;
+    }
   }
 
-  .tab-title.active a {
-    border-radius: $global-radius;
-    border-top-right-radius: none;
-    border-bottom-right-radius: none;
+  .tab-title.active {
+    background-color: #fff;
+    a {
+      border-radius: $global-radius;
+      border-top-right-radius: none;
+      border-bottom-right-radius: none;
+      display: inline-block;
+
+      &.group-settings {
+        float:right;
+        padding: rem-calc(16);
+        color: #aaa;
+      }
+    }
   }
 
   .tab-title#new-group-link {

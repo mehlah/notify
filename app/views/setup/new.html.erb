@@ -6,6 +6,9 @@
     <p>Pour démarrer, créez votre première classe.</p>
     <p>Le nom de classe peut être ce que vous souhaitez. Ne vous inquiétez pas, vous pourrez en rajouter d'autres plus tard.</p>
 
-    <%= render 'groups/form' %>
+    <%= simple_form_for @group do |f| %>
+      <%= f.input :class_name, label: 'Nom de la classe' %>
+      <%= f.button :submit, 'Ajouter cette classe' %>
+    <% end %>
   </div>
 </div>

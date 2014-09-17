@@ -27,6 +27,11 @@ $button-font-sml: rem-calc(14);
 $button-font-med: rem-calc(16);
 $button-font-lrg: rem-calc(20);
 
+$has-tip-border-bottom: none;
+$has-tip-border-bottom-hover: none;
+$tooltip-padding: rem-calc(10);
+$tooltip-font-size: rem-calc(12);
+
 @import 'foundation';
 
 .button {
