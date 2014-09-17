@@ -6,3 +6,7 @@
 @import 'groups';
 @import 'subscribers';
 @import 'messages';
+
+a[data-method=delete] {
+  color: $alert-color;
+}

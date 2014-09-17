@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group, only: [:show, :edit, :update]
+  before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   def show
     @groups = current_user.groups
@@ -25,6 +25,11 @@ class GroupsController < ApplicationController
   def update
     @group.update(group_params)
     redirect_to @group
+  end
+
+  def destroy
+    @group.destroy
+    redirect_to root_path
   end
 
   private

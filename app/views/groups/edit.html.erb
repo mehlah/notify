@@ -6,4 +6,6 @@
   <%= f.button :submit, 'Enregistrer les modifications' %>
 <% end %>
 
+<p>ou <%= link_to 'supprimer', @group, method: :delete, data: { confirm: 'Etes vous sûr(e) ?' } %> définitivement cette classe.</p>
+
 <a class="close-reveal-modal">&#215;</a>
