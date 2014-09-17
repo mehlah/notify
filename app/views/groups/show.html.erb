@@ -1,4 +1,4 @@
-<div class="row">
+<div id="show-group" class="row">
   <div class="small-12 columns">
     <ul class="tabs vertical">
       <% @groups.each do |group| %>
@@ -16,17 +16,18 @@
     <div class="tabs-content vertical">
       <div class="content active">
         <div class="row">
-          <div class="small-12 medium-8 columns">
+          <div class="small-12 medium-9 columns">
             <div id="new-message">
               <%= render 'messages/new' %>
             </div>
 
             <div id="sent-messages">
               <h5><i class="icon-paper-plane"></i> Messages envoyés</h5>
+              <hr>
               <%= render @group.messages %>
             </div>
           </div>
-          <div class="medium-4 columns hide-for-small">
+          <div class="medium-3 columns hide-for-small">
             <%= link_to new_group_subscriber_path(@group), class: 'button', data: { reveal_id: 'new-subscription', reveal_ajax: true } do %>
               <i class="icon-user-follow"></i> Ajouter des parents
             <% end %>

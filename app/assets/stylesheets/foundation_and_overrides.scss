@@ -2,10 +2,16 @@
 
 $row-width: rem-calc(1180);
 
+$primary-color: #65C178;
+
 $body-font-family: "proxima-nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-bg: #EDEDEB;
+
+$tabs-navigation-bg-color: #EDEDEB;
 
 $topbar-height: 45px;
 $topbar-margin-bottom: $topbar-height * $golden;
+$topbar-bg: #3D3D3D;
 
 $form-spacing: rem-calc(18);
 $form-label-font-size: rem-calc(16);
@@ -24,7 +30,7 @@ $button-font-lrg: rem-calc(20);
 @import 'foundation';
 
 .button {
-  @include button($button-med, $button-bg-color, true, false, false, false);
+  @include button($button-sml, $button-bg-color, true, false, false, false);
 }
 
 form {

@@ -1,10 +1,30 @@
-.tab-title#new-group-link {
-  > a {
-    background: transparent;
-    color: $primary-color;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: rem-calc(14);
-    letter-spacing: .075em;
+#show-group {
+  .tabs-content.vertical {
+    background: #fff;
+    padding-top: $column-gutter;
+    padding-right: $column-gutter / 2;
+    border-radius: $global-radius;
+  }
+
+  .tab-title {
+    border-bottom: 1px solid $tabs-navigation-hover-bg-color;
+  }
+
+  .tab-title.active a {
+    border-radius: $global-radius;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+  }
+
+  .tab-title#new-group-link {
+    border-bottom: none;
+    > a {
+      background: transparent;
+      color: $primary-color;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: rem-calc(12);
+      letter-spacing: .075em;
+    }
   }
 }

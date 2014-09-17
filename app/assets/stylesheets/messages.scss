@@ -1,6 +1,7 @@
 #new-message {
+  margin-bottom: $column-gutter;
   textarea {
-    height: rem-calc(80);
+    height: rem-calc(100);
     resize: none;
   }
 }
