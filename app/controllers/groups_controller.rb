@@ -4,7 +4,6 @@ class GroupsController < ApplicationController
 
   def show
     @groups = current_user.groups.ordered
-    @message = Message.new
   end
 
   def new
