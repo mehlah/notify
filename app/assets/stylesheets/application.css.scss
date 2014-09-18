@@ -10,3 +10,8 @@
 a[data-method=delete] {
   color: $alert-color;
 }
+
+#container {
+  padding-top: $topbar-height * $golden;
+  padding-bottom: rem-calc(30);
+}
