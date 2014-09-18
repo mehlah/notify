@@ -6,7 +6,7 @@ feature 'User signs out' do
     login_as(user, scope: :user)
 
     visit '/'
-    click_link 'Se déconnecter'
+    click_link 'Déconnexion'
 
     expect(page).not_to have_content(user.name)
     expect(page).to have_content('Se connecter')

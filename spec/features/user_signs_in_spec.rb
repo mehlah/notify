@@ -11,6 +11,6 @@ feature 'User signs in' do
     click_button 'Se connecter'
 
     expect(page).to have_content(user.name)
-    expect(page).to have_content('Se déconnecter')
+    expect(page).to have_content('Déconnexion')
   end
 end
