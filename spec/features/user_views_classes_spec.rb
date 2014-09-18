@@ -9,7 +9,7 @@ feature 'User views classes' do
     visit '/'
 
     groups.each do |group|
-      expect(page).to have_content(group.class_name)
+      expect(page).to have_content(group.name)
     end
   end
 end

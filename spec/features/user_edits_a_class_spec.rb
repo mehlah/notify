@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'User update classes settings' do
   scenario 'updates a class' do
     user = create(:user)
-    group = create(:group, class_name: 'Old name', user: user)
+    group = create(:group, name: 'Old name', user: user)
     login_as(user, scope: :user)
 
     visit '/'

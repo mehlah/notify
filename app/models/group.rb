@@ -4,5 +4,5 @@ class Group < ActiveRecord::Base
   has_many :subscribers, through: :subscriptions
   has_many :messages
 
-  validates :class_name, presence: true
+  validates :name, presence: true
 end

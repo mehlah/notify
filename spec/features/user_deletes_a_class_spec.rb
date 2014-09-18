@@ -10,6 +10,6 @@ feature 'User update classes settings' do
     find(:xpath, "//a[@href='#{edit_group_path(group)}']").click
     click_link 'supprimer'
 
-    expect(page).not_to have_content(group.class_name)
+    expect(page).not_to have_content(group.name)
   end
 end

@@ -6,5 +6,5 @@ describe Group do
   it { should have_many(:subscribers).through(:subscriptions) }
   it { should have_many(:messages) }
 
-  it { should validate_presence_of(:class_name) }
+  it { should validate_presence_of(:name) }
 end
