@@ -5,4 +5,8 @@ class Group < ActiveRecord::Base
   has_many :messages
 
   validates :name, presence: true
+
+  def self.ordered
+    order(:name)
+  end
 end
