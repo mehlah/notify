@@ -15,3 +15,11 @@ a[data-method=delete] {
   padding-top: $topbar-height * $golden;
   padding-bottom: rem-calc(30);
 }
+
+.blankslate {
+  text-align: center;
+  color: #aaa;
+  i {
+    font-size: rem-calc(50);
+  }
+}

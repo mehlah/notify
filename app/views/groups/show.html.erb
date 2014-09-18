@@ -39,9 +39,16 @@
               <header>
                 <h6><i class="icon-users"></i> <%= pluralize(@group.subscribers.size, 'inscrit', 'inscrits') %></h6>
               </header>
-              <ol>
-                <%= render @group.subscribers %>
-              </ol>
+              <% if @group.subscribers.present? %>
+                <ol>
+                  <%= render @group.subscribers %>
+                </ol>
+              <% else %>
+                <div class="blankslate">
+                  <i class="icon-users"></i>
+                  <p>Aucun parent n'est inscrit à cette classe.</p>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>

@@ -31,6 +31,10 @@
       padding: rem-calc(8) $column-gutter / 4;
     }
   }
+
+  .blankslate {
+    padding: $panel-padding;
+  }
 }
 
 .subscriber {
