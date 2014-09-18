@@ -1,14 +1,22 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group
+
+  respond_to :json
+
+  def index
+    group = current_user.groups.find(params[:group_id])
+    render json: group.messages.ordered
+  end
 
   def create
-    @message = @group.messages.new(message_params)
-    if @message.save
-      @message.broadcast
-      redirect_to @group
+
+    group = current_user.groups.find(params[:group_id])
+    message = group.messages.new(message_params)
+    if message.save
+      message.broadcast
+      render json: message, status: :created
     else
-      head 502
+      render json: message.errors, status: :unprocessable_entity
     end
   end
 
@@ -16,9 +24,5 @@ class MessagesController < ApplicationController
 
   def message_params
     params.require(:message).permit(:body)
-  end
-
-  def set_group
-    @group = current_user.groups.find(params[:group_id])
   end
 end

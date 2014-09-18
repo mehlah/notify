@@ -20,15 +20,7 @@
       <div class="content active">
         <div class="row">
           <div class="small-12 medium-9 columns">
-            <div id="new-message">
-              <%= render 'messages/new' %>
-            </div>
-
-            <div id="sent-messages">
-              <h5><i class="icon-paper-plane"></i> Messages envoyés</h5>
-              <hr>
-              <%= render @group.messages.ordered %>
-            </div>
+            <%= react_component('MessageBox', url: group_messages_path(@group)) %>
           </div>
           <div class="medium-3 columns hide-for-small">
             <%= link_to new_group_subscriber_path(@group), class: 'button', data: { reveal_id: 'new-subscription', reveal_ajax: true } do %>

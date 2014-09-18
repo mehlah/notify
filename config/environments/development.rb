@@ -44,4 +44,6 @@ Rails.application.configure do
   # Specific mailers path
   config.action_mailer.preview_path = Rails.root + '/spec/mailers/previews'
 
+  # React
+  config.react.variant = :development
 end

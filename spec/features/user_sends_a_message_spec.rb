@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User sends a message' do
+feature 'User sends a message', js: true do
   scenario 'sees the message in sent list' do
     user = create(:user, :with_groups)
     login_as(user, scope: :user)
