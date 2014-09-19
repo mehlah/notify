@@ -6,6 +6,12 @@
   }
 }
 
+#sent-messages {
+  .blankslate {
+    padding: $panel-padding;
+  }
+}
+
 .message {
   time {
     font-size: rem-calc(13);

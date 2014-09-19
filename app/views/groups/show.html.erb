@@ -27,7 +27,14 @@
             <div id="sent-messages">
               <h5><i class="icon-paper-plane"></i> Messages envoyés</h5>
               <hr>
-              <%= render @group.messages.ordered %>
+              <% if @group.messages.present? %>
+                <%= render @group.messages.ordered %>
+              <% else %>
+                <div class="blankslate">
+                  <i class="icon-drawer"></i>
+                  <p>Aucun message n'a encore été envoyé aux parents d'élèves de cette classe.</p>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="medium-3 columns hide-for-small">
