@@ -25,8 +25,10 @@ feature 'User views a class subscribers' do
 
     visit '/'
 
-    expect(page).to have_content('0 inscrits')
-    expect(page).to have_content("Aucun parent n'est inscrit à cette classe.")
+    within('#subscribers') do
+      expect(page).to have_content('0 inscrits')
+      expect(page).to have_content("Aucun parent n'est inscrit à cette classe.")
+    end
   end
 
   scenario 'views formatted phone numbers' do
