@@ -1,2 +1,5 @@
-<p><%= message.body %></p>
+<div class="message">
+  <time is="relative-time" datetime="<%= message.created_at %>"><%= l message.created_at, format: :short %></time>
+  <p><%= message.body %></p>
+</div>
 <hr>
