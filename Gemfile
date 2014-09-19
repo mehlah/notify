@@ -18,6 +18,7 @@ gem 'rails-assets-modular-scale'
 gem 'recipient_interceptor'
 gem 'sass-rails', '~> 4.0.3'
 gem 'simple_form'
+gem 'twilio-ruby'
 gem 'uglifier'
 gem 'unicorn'
 

@@ -14,4 +14,16 @@ describe Message do
       expect(Message.ordered.pluck(:body)).to eq(%w(first second third))
     end
   end
+
+  describe '#broadcast' do
+    it 'enqueues a job to send the message for each subscriber of the group' do
+      SendTextMessageJob.stub(:enqueue)
+      group = create(:group, :with_subscriptions, subscriptions_count: 2)
+      message = create(:message, group: group)
+
+      message.broadcast
+
+      expect(SendTextMessageJob).to have_received(:enqueue).twice
+    end
+  end
 end

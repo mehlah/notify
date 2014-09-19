@@ -6,4 +6,10 @@ class Message < ActiveRecord::Base
   def self.ordered
     order(created_at: :desc)
   end
+
+  def broadcast
+    group.subscribers.each do |subscriber|
+      SendTextMessageJob.enqueue(subscriber.phone, body)
+    end
+  end
 end

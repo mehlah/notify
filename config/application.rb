@@ -25,6 +25,8 @@ module Notify
       generate.view_specs false
     end
 
+    config.autoload_paths << File.join(config.root, 'lib')
+
     config.i18n.default_locale = :fr
     config.i18n.enforce_available_locales = true
 
