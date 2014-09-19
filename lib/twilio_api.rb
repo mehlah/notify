@@ -6,8 +6,14 @@ class TwilioApi
   def send_sms(to, body)
     client.account.sms.messages.create(
       from: ENV['TWILIO_PHONE_NUMBER'],
-      to: to,
+      to: formatted_phone(to),
       body: body
     )
+  end
+
+  private
+
+  def formatted_phone(number)
+    number.phony_formatted(format: :international, spaces: '')
   end
 end

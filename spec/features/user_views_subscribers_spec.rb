@@ -28,4 +28,17 @@ feature 'User views a class subscribers' do
     expect(page).to have_content('0 inscrits')
     expect(page).to have_content("Aucun parent n'est inscrit à cette classe.")
   end
+
+  scenario 'views formatted phone numbers' do
+    user = create(:user, :with_groups)
+    subscriber = create(:subscriber, phone: '0642755592')
+    create(:subscription, group: user.groups.first, subscriber: subscriber)
+    login_as(user, scope: :user)
+
+    visit '/'
+
+    within('#subscribers') do
+      expect(page).to have_content('06 42 75 55 92')
+    end
+  end
 end
