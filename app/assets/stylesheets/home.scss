@@ -1,0 +1,26 @@
+.benefits {
+  hr {
+    width: 70%;
+    border: 1px solid #aaa;
+  }
+
+  .benefit {
+    margin-top: rem-calc(30);
+  }
+
+  .icon {
+    font-size: rem-calc(40);
+    color: #aaa;
+  }
+}
+
+#call-to-action {
+  padding-top: rem-calc(30);
+  padding-bottom: rem-calc(30);
+
+  a {
+    strong {
+      font-weight: 600;
+    }
+  }
+}
