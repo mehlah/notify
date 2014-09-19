@@ -24,7 +24,7 @@ namespace :dev do
     @group1 = FactoryGirl.create(:group, :with_subscriptions, name: 'CP', user: @user, subscriptions_count: 22)
     @group2 = FactoryGirl.create(:group, :with_subscriptions, name: 'CE1', user: @user, subscriptions_count: 18)
     @group3 = FactoryGirl.create(:group, :with_subscriptions, name: 'CE2', user: @user, subscriptions_count: 15)
-    @group4 = FactoryGirl.create(:group, :with_subscriptions, name: 'CM1', user: @user, subscriptions_count: 12)
+    @group4 = FactoryGirl.create(:group, name: 'CM1', user: @user)
     @group5 = FactoryGirl.create(:group, :with_subscriptions, name: 'CM2', user: @user, subscriptions_count: 10)
   end
 
