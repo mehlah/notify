@@ -33,9 +33,9 @@
             <% end %>
 
             <div id="subscribers">
-              <header>
+              <div class="panel-header">
                 <h6><i class="icon-users"></i> <%= pluralize(@group.subscribers.size, 'inscrit', 'inscrits') %></h6>
-              </header>
+              </div>
               <% if @group.subscribers.present? %>
                 <ol>
                   <%= render @group.subscribers %>

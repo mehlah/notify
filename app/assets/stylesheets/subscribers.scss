@@ -2,7 +2,7 @@
   @include panel($bg:#fff, $padding:0, $adjust:false);
   @include radius;
 
-  header {
+  .panel-header {
     background: $panel-bg;
     padding: rem-calc(8) $column-gutter / 2;
     border-bottom: 1px solid $panel-border-color;
