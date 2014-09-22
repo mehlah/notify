@@ -23,10 +23,7 @@
               <% if @group.messages.present? %>
                 <%= render @group.messages.ordered %>
               <% else %>
-                <div class="blankslate">
-                  <i class="icon-drawer"></i>
-                  <p>Aucun message n'a encore été envoyé aux parents d'élèves de cette classe.</p>
-                </div>
+                <%= render 'messages/blankslate' %>
               <% end %>
             </div>
           </div>
@@ -44,10 +41,7 @@
                   <%= render @group.subscribers %>
                 </ol>
               <% else %>
-                <div class="blankslate">
-                  <i class="icon-users"></i>
-                  <p>Aucun parent n'est inscrit à cette classe.</p>
-                </div>
+                <%= render 'subscribers/blankslate' %>
               <% end %>
             </div>
           </div>
