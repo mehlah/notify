@@ -1,0 +1,6 @@
+<li class="tab-title <%= 'active' if current_page?(group) %>">
+  <%= link_to group.name, group %>
+  <%= link_to edit_group_path, class: 'group-settings has-tip tip-top radius', data: { tooltip: true, reveal_id: 'edit-group', reveal_ajax: true }, title: 'Paramètres de la classe' do %>
+    <i class="icon-settings"></i>
+  <% end %>
+</li>
