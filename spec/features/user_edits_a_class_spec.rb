@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User update classes settings' do
   scenario 'updates a class' do

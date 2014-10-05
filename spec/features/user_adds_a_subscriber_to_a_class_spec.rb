@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User adds subscribers to a class' do
   scenario 'adds a subscriber by filling the form' do

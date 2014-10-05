@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User views a group messages' do
   scenario 'views all the messages' do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'Initial classes setup' do
   scenario 'the user is redirected to a welcome page' do
@@ -22,4 +22,3 @@ feature 'Initial classes setup' do
     expect(page).to have_content('Maths 1')
   end
 end
-

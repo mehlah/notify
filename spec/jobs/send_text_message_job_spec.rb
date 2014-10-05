@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe SendTextMessageJob do
   describe '.perform' do
@@ -13,7 +13,7 @@ describe SendTextMessageJob do
 
   def stub_twilio_api
     api = double(:twilio_api, send_sms: true)
-    TwilioApi.stub(new: api)
+    allow(TwilioApi).to receive_messages(new: api)
     api
   end
 end

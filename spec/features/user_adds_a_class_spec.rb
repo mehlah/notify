@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User adds classes' do
   scenario 'adds a new class' do

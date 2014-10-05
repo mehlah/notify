@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User views a class subscribers' do
   scenario 'views all the subscribers' do

@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe Message do
   it { should belong_to(:group) }
@@ -17,7 +17,7 @@ describe Message do
 
   describe '#broadcast' do
     it 'enqueues a job to send the message for each subscriber of the group' do
-      SendTextMessageJob.stub(:enqueue)
+      allow(SendTextMessageJob).to receive(:enqueue)
       group = create(:group, :with_subscriptions, subscriptions_count: 2)
       message = create(:message, group: group)
 

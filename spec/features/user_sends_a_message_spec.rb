@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature 'User sends a message' do
   scenario 'sees the message in sent list' do
