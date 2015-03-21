@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.1.2'
+ruby '2.2.1'
 
 gem 'coffee-rails'
 gem 'delayed_job_active_record'
