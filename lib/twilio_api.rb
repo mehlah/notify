@@ -4,7 +4,7 @@ class TwilioApi
   end
 
   def send_sms(to, body)
-    client.account.sms.messages.create(
+    client.messages.create(
       from: ENV['TWILIO_PHONE_NUMBER'],
       to: formatted_phone(to),
       body: body
