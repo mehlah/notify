@@ -22,7 +22,7 @@ describe Subscriber do
 
         subscriber.valid?
 
-        expect(subscriber.phone).to eq('33642755592')
+        expect(subscriber.phone).to eq('+33642755592')
       end
     end
   end
