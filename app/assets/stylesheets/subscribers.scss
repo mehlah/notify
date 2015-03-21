@@ -27,7 +27,7 @@
       margin-top: rem-calc(8);
     }
 
-    a {
+    > a {
       padding: rem-calc(8) $column-gutter / 4;
     }
   }

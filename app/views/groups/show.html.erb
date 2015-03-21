@@ -34,14 +34,14 @@
 
             <div id="subscribers">
               <div class="panel-header">
-                <h6><i class="icon-users"></i> <%= pluralize(@group.subscribers.size, 'inscrit', 'inscrits') %></h6>
+                <h6><i class="icon-users"></i> <%= pluralize(@group.subscriptions.size, 'inscrit', 'inscrits') %></h6>
               </div>
-              <% if @group.subscribers.present? %>
+              <% if @group.subscriptions.present? %>
                 <ol>
-                  <%= render @group.subscribers %>
+                  <%= render @group.subscriptions %>
                 </ol>
               <% else %>
-                <%= render 'subscribers/blankslate' %>
+                <%= render 'subscriptions/blankslate' %>
               <% end %>
             </div>
           </div>
